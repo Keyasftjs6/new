@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .car {
+            width: 200px;
+            height: 100px;
+            background-image: url('https://i.pinimg.com/originals/d1/f1/43/d1f1433c7ac56687e153fac316abde87.jpg');
+            background-size: cover;
+            position: absolute;
+            left: -200px;
+            top: 50%;
+            transition: left 2s ease; /* Анимация выезда машины */
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="car"></div>
+
+    <script>
+        // Для анимации выезда машины
+        window.onload = function() {
+            document.querySelector('.car').style.left = 'calc(100% - 50px)';
+        };
+    </script>
+</body>
+</html>
